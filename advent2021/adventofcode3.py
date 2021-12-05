@@ -9,7 +9,7 @@ def binary_to_int(binary: int) -> int:
     Convert binary number to integer
     """
     converted_int = 0
-    base = 1
+    base = 2 ** 0
     while(binary):
         remainder = binary % 10
         converted_int += remainder * base
@@ -33,8 +33,8 @@ def find_most_and_least_common_binary(input: list[str]) -> Tuple[str, str]:
         for binary in input:
             sum += int(binary[i])
         if sum/n_binary == 0.5:
-            most_common = (most_common + str(1))
-            least_common = (least_common + str(0))
+            most_common += str(1)
+            least_common += str(0)
         else:            
             most_common = (most_common + str(round(sum/n_binary)))
             least_common = (least_common + str(abs(round(sum/n_binary)-1)))
