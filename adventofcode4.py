@@ -54,7 +54,8 @@ class Game():
 
     def play_bingo_find_last(self):
         """
-        Loop through random numbers, update boards and check for bingo
+        Loop through random numbers, update boards and check for bingo.
+        Return last board to bingo including board score.
         """
         for number in self.random_numbers:   
             for i, board in enumerate(self.boards):
